@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nithin's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <a href="#about"><div class="logo">R S Nithin</div></a>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <a href="#about"><div class="logo">R S Nithin</div></a>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#Publications" onclick="toggleMenu()">Publications</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Nithin profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Rayapalli Sai Nithin</h1>
+        <p class="section__text__p2">AI&DS Graduate</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Rayapalli-Sai-Nithin-Resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="window.open('https://www.linkedin.com/in/nithin-rayapalli14', '_blank')"
+            target="_blank"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="window.open('https://github.com/rsnithin12', '_blank')"
+          />
+          <img
+            src="./assets/credly.png"
+            alt="My Credly Profile"
+            class="icon"
+            onclick="window.open('https://www.credly.com/users/sai-nithin-rayapalli', '_blank')"
+          />
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow-profile"
+        onclick="location.href='./#about'"
+      />
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="about-details-container">
+          <div class="text-container">
+            <p>
+              I’m Sai Nithin Rayapalli, a dedicated and enthusiastic graduate in <b>Artificial Intelligence</b> and Data Science, currently pursuing my M.Tech in Computer Science at NIT Srinagar. 
+              My academic journey has shaped me into a critical thinker with a strong foundation in machine learning, deep learning, and core programming skills across <b>Python</b>, Java, and C.
+              I have a keen interest in <b>Data Science and Machine Learning</b>, and I’m constantly exploring new technologies to stay at the cutting edge of AI advancements. 
+              My internship experience has helped me develop practical knowledge in model development and data analysis, while also honing my skills in time management, problem-solving, and effective communication.
+              As a motivated learner and a natural team player, I aim to contribute to innovative and impactful solutions that leverage the power of data to make a difference.
+            </p>
+          </div>
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Excellence icon"
+                class="icon"
+              />
+              <h3>
+                Certificate of Excellence</h3>
+              <p>Bachelors of Technology Batch 2020-2024<br />Seshadri Rao Gudlavalleru Engineering College</p>
+            </div>
+          <div class="details-container">
+            <img
+              src="./assets/ranker.png"
+              alt="Ranker icon"
+              class="icon"
+            />
+            <h3>TCS Code-Vita Season 11 Ranker </h3>
+            <p>Tata Consultancy Services<br />2023-2024</p>
+          </div>
+          <div class="details-container">
+            <img
+              src="./assets/qualifier.png"
+              alt="Qualifier icon"
+              class="icon"
+            />
+            <h3>GATE Qualifier</h3>
+            <p>Graduate Aptitude Test in Engineering<br />2024</p>
+          </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#education'"
+      />
+    </section>
+    <section id="education">
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const timeline = document.getElementById('timelineSection');
+      
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                timeline.classList.add('start-animation');
+                //observer.unobserve(timeline); // Remove this if you want it to trigger again
+              }
+            });
+          }, { threshold: 0.1 }); // Adjust threshold for when you want it to trigger
+      
+          observer.observe(timeline);
+        });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const containers = document.querySelectorAll(".container");
+      
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+                //observer.unobserve(entry.target); // Remove this if you want it to re-trigger
+              }
+            });
+          }, { threshold: 0.1 }); // Adjust threshold to taste
+      
+          containers.forEach((container) => {
+            observer.observe(container);
+          });
+        });
+      </script>
+      <p class="section__text__p1">My</p>
+      <h1 class="title">Education</h1>
+      <div class="timeline" id="timelineSection">
+        <div class="container left-container">
+            <img src="assets/mastersimg.png" alt="Masters Icon">
+            <div class="text-box">
+                <h2>Masters of Technology</h2>
+                <h2>Computer Science</h2>
+                <small>2024-2026</small>
+                <p>CGPA: 8.3</p>
+                <span class="left-contianer-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="assets/btechimg.png" alt="Bachelores Icon">
+            <div class="text-box">
+                <h2>Bachelores of Technology</h2>
+                <h2>Artificial Intelligence and Data Science</h2>
+                <small>2020-2024</small>
+                <p>CGPA: 8.88</p>
+                <span class="right-contianer-arrow"></span>
+            </div>
+        </div>
+        <div class="container left-container">
+            <img src="assets/interimg.png" alt="Icon">
+            <div class="text-box">
+                <h2>Intermediate Education</h2>
+                <h2>MPC</h2>
+                <small>2018-2020</small>
+                <p>CGPA: 9.73</p>
+                <span class="left-contianer-arrow"></span>
+            </div>
+        </div>
+        <div class="container right-container">
+            <img src="assets/schimg.png" alt="Icon">
+            <div class="text-box">
+                <h2>Secondary Education</h2>
+                <h2>10th Class</h2>
+                <small>2017-2018</small>
+                <p>CGPA: 9.5 </p>
+                <span class="right-contianer-arrow"></span>
+            </div>
+        </div>
+    </div>
+    <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow corner-arrow"
+        style="position:relative"
+        onclick="location.href='./#skills'"
+      />
+    </section>
+    <section id="skills">
+      <p class="section__text__p1">My</p>
+      <h1 class="title">Skills</h1>
+      <div class="skills-container">
+        <div class="skill">
+          <img class="skill-icon" src="assets/python.png"><h1>Python</h1><small>Experienced</small>
+        </div>
+        <div class="skill">
+          <img class="skill-icon" src="assets/java.png"><h1>Java</h1><small>Intermediate</small>
+        </div>
+        <div class="skill">
+          <img class="skill-icon" src="assets/c.jpg"><h1>C</h1><small>Intermediate</small>
+        </div>
+        <div class="skill">
+          <img class="skill-icon" src="assets/html.jpg"><h1>HTML</h1><small>Intermediate</small>
+        </div>
+        <div class="skill">
+          <img class="skill-icon" src="assets/css.jpg"><h1>CSS</h1><small>Basic</small>
+        </div>
+        <div class="skill">
+          <img class="skill-icon" src="assets/sql.png"><h1>SQL</h1><small>Intermediate</small>
+        </div>
+        <div class="skill">
+          <img class="skill-icon" src="assets/dbms.webp"><h1>DBMS</h1><small>Intermediate</small>
+        </div>
+      </div>
+      <h1 style="text-align: center;">Technical Skills</h1>
+      <div class="skills-container">
+        <div class="article">
+          <img class="icon" src="assets/checkmark.png"><h3>Time Management</h3>
+        </div>
+        <div class="article">
+          <img class="icon" src="assets/checkmark.png"><h3>Team Player</h3>
+        </div>
+        <div class="article">
+          <img class="icon" src="assets/checkmark.png"><h3>Eye for Detail</h3>
+        </div>
+        <div class="article">
+          <img class="icon" src="assets/checkmark.png"><h3>Effective Communication</h3>
+        </div>
+      </div>
+      <h1 style="text-align: center;">Personality Skills</h1>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow corner-arrow"
+        style="position:relative"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section class="pro" id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+
+      <button class="arrowpro left-arrow">&#8592;</button>
+
+      <div class="about-containerspro">
+        <div class="details-containerpro color-container">
+          <div class="article-container-wrapper">
+            <!-- Slide 1 -->
+            <div class="article-container">
+              <h2 class="experience-sub-title project-title">
+                Diabetic Retinopathy Detection
+              </h2>
+              <img
+                src="./assets/DRDpro.png"
+                alt="Project 1"
+                class="project-img"
+              />
+              <div class="text-containerpro">
+                <p>
+                  This project focuses on detecting diabetic retinopathy (DR), a serious eye condition caused by diabetes, using deep learning models. 
+                  Retinal fundus images are analyzed with advanced convolutional neural networks models.
+                  In which, EfficientNetB0 delivered the highest accuracy (95.39%). The project leverages transfer learning and data augmentation to enhance 
+                  model performance and efficiency, especially in limited data scenarios. A web application was also developed using Flask to allow users to upload retinal images 
+                  and receive predictions on DR severity, improving accessibility and aiding early diagnosis.<br>
+                  <b>Technology Stack:</b> Python, Deep Learning, HTML, CSS, PyTorch
+                </p>
+              </div>
+              <div class="btn-containerpro">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/rsnithin12/Diabetic_Retinopathy_Detection_Using_DL', '_blank')"
+                >
+                  Github
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="article-container">
+              <h2 class="experience-sub-title project-title">
+                Strain Analysis Based on Eye Blinking
+              </h2>
+              <img
+                src="./assets/Strain.png"
+                alt="Project 2"
+                class="project-img"
+              />
+              <div class="text-containerpro">
+                <p>
+                  Strain Analysis Based on Eye Blinking Using Python and OpenCV is a real-time fatigue monitoring system 
+                  that evaluates eye blinking patterns to detect signs of visual strain. The system uses a webcam to capture facial data, 
+                  employs Dlib's 64-landmark shape predictor to precisely locate eye regions, and computes the Eye Aspect Ratio (EAR) to identify blinks. 
+                  By analyzing the frequency and irregularity of blinks, the system triggers alerts via audio and popup notifications when strain is suspected. 
+                  <br>
+                  <b>Technology Stack:</b> Python, OpenCV, Dlib (64-landmark shape predictor), VS-Code
+                </p>
+              </div>
+              <div class="btn-containerpro">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/rsnithin12/Strain-Analysis-Based-on-eye-blinking', '_blank')"
+                >
+                  Github
+                </button>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="article-container">
+              <h2 class="experience-sub-title project-title">
+                Passengers Monitoring System
+              </h2>
+              <img
+                src="./assets/passmoni.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+              <div class="text-containerpro">
+                <p>
+                  The Passengers Monitoring System is an IoT-based solution designed to count passengers entering
+                  and exiting public transport vehicles, like buses. Using infrared sensors and an Arduino, 
+                  it tracks real-time occupancy and displays it on an OLED screen. 
+                  The system also controls lights based on passenger presence, aiming to improve transport efficiency, 
+                  reduce manual errors, and help both passengers and authorities manage seating better.<br>
+                  <b>Technology Stack:</b>Arduino IDE, IR Sensors,Arduino Uno
+                </p>
+              </div>
+              <div class="btn-containerpro">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="window.open('https://github.com/rsnithin12/Passengers_Monitoring_System', '_blank')"
+                >
+                  Github
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="arrowpro right-arrow">&#8594;</button>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow pro-arrow"
+        style="position:relative"
+        onclick="location.href='./#publications'"
+      />
+    </section>
+    <section id="publications">
+      <p class="section__text__p1">My</p>
+      <h1 class="title">Publications</h1>
+      <div class="details-container">
+        <h2>Medical Insurance Predictive Modelling: An Analysis of Machine Learning Methods</h2>
+        <h3> 2024 IEEE International Conference on Interdisciplinary Approaches in Technology and Management for Social Innovation (IATMSI)</h3>
+        <div class="text-containerpro">
+          <p>
+            Predicting healthcare expenses accurately is crucial for a wide range of stakeholders and healthcare institutions. 
+            Machine learning (ML) may help enhance policy wording efficiency
+            in the insurance industry, and ML algorithms are especially beneficial in healthcare for projecting high-cost, high-need patient bills.
+            A computational intelligence technique is used to estimate healthcare insurance expenditures using machine learning algorithms. 
+            It is difficult to choose a single regression model for predicting health-care costs, thus we build an algorithm that uses multiple regression models 
+            and calculates the accuracy. The stochastic gradient boosting technique achieves an accuracy of 88.98%.
+          </p>
+        </div>
+        <div class="btn-containerpro">
+          <button
+            class="btn btn-color-2 project-btn"
+            onclick="window.open('https://ieeexplore.ieee.org/document/10502643', '_blank')"
+          >
+            Website
+          </button>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow-pub"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:nithnirsn1515@gmail.com">nithinrsn1515@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+            onclick="window.open('https://www.linkedin.com/in/nithin-rayapalli14', '_blank')"
+          />
+          <p onclick="window.open('https://www.linkedin.com/in/nithin-rayapalli14', '_blank')" style="cursor: pointer;"><a>LinkedIn</a></p>
+        </div>
+        <div class="contact-info-container">
+          <a href="tel:+91 9441085597"><img
+            src="./assets/call.png"
+            alt="Calling icon"
+            class="icon contact-icon"
+          /></a>
+          <p style="cursor: pointer;"><a href="tel:+91 9441085597">Mobile</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 R S Nithin. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      const wrapper = document.querySelector(".article-container-wrapper");
+      let slideIndex = 0;
+
+      document.querySelector(".left-arrow").addEventListener("click", () => {
+        if (slideIndex > 0) {
+          slideIndex--;
+          wrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+      });
+
+      document.querySelector(".right-arrow").addEventListener("click", () => {
+        if (slideIndex < wrapper.children.length - 1) {
+          slideIndex++;
+          wrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+      });
+    </script>
+  </body>
+  </html>
