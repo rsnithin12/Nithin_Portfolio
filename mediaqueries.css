@@ -74,7 +74,6 @@
   .contact-info-upper-container,
   .btn-container {
     flex-wrap: wrap;
-    flex-direction: column;
         gap: 0.7rem;
   }
   .contact-info-container {
