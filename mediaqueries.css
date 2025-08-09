@@ -211,30 +211,96 @@
 
 }
 
-/* LARGE SCREEN CONSTRAINTS - Prevent layout expansion beyond 1400px */
-@media screen and (min-width: 1401px) {
+/* ABSOLUTE LAYOUT CONTROL FOR LARGE SCREENS */
+@media screen and (min-width: 1441px) {
+  /* Lock the entire layout to 1440px width */
+  html {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
   body {
-    max-width: 1400px !important;
-    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow-x: hidden !important;
   }
   
-  /* Override any section margins for large screens */
+  .main-container {
+    width: 1440px !important;
+    max-width: 1440px !important;
+    min-width: 1440px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Ensure no element can break out of the container */
+  .main-container * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Navigation bar fixed */
+  #desktop-nav,
+  #hamburger-nav {
+    width: 100% !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* All sections stay within bounds */
   section {
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 1400px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
   }
   
-  /* Ensure consistent spacing */
-  .pro {
-    margin: 0 5rem !important;
-    max-width: calc(1400px - 10rem) !important;
+  /* Specific section overrides */
+  #profile,
+  #about,
+  #skills,
+  #projects,
+  #publications,
+  #contact {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
   }
   
-  /* Keep navigation consistent */
-  nav {
-    max-width: 1400px !important;
-    margin: 0 auto !important;
-    padding: 0 2rem !important;
+  /* Container elements */
+  .section-container,
+  .about-containers,
+  .details-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Timeline specific */
+  .timeline {
+    max-width: 1200px !important;
+    width: calc(100% - 200px) !important;
+    margin: 5px auto !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Projects and articles */
+  .article-container-wrapper,
+  .article-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
+  /* Prevent any horizontal overflow */
+  * {
+    overflow-x: hidden !important;
   }
 }
