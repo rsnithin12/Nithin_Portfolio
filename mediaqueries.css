@@ -210,3 +210,31 @@
 }
 
 }
+
+/* LARGE SCREEN CONSTRAINTS - Prevent layout expansion beyond 1400px */
+@media screen and (min-width: 1401px) {
+  body {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Override any section margins for large screens */
+  section {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1400px !important;
+  }
+  
+  /* Ensure consistent spacing */
+  .pro {
+    margin: 0 5rem !important;
+    max-width: calc(1400px - 10rem) !important;
+  }
+  
+  /* Keep navigation consistent */
+  nav {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+  }
+}

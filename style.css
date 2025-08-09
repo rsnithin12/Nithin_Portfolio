@@ -7,6 +7,9 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  max-width: 1400px; /* Fixed maximum width for larger screens */
+  margin: 0 auto; /* Center the content horizontally */
+  box-sizing: border-box;
 }
 
 html {
@@ -695,5 +698,46 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+/* LARGE SCREEN LAYOUT CONSTRAINTS */
+/* Ensure layout dimensions remain consistent on larger screens */
+@media screen and (min-width: 1401px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* Maintain consistent navigation width */
+  nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  
+  /* Prevent sections from expanding beyond intended width */
+  section {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Ensure profile section maintains proportions */
+  #profile {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  /* Keep timeline centered and at fixed width */
+  .timeline {
+    max-width: 1200px;
+    margin: 5px auto;
+  }
+  
+  /* Maintain consistent footer width */
+  footer {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 }
 
