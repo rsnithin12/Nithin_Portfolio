@@ -5,26 +5,8 @@
   padding: 0;
 }
 
-/* GLOBAL LAYOUT CONTROL */
-html {
-  overflow-x: hidden;
-  width: 100%;
-}
-
 body {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-  width: 100%;
-}
-
-/* MAIN CONTAINER - Fixed Layout Control */
-.main-container {
-  max-width: 1440px; /* Set to current standard screen width */
-  width: 100%;
-  margin: 0 auto;
-  overflow-x: hidden;
-  box-sizing: border-box;
-  position: relative;
 }
 
 html {
@@ -713,74 +695,5 @@ footer {
 
 footer p {
   text-align: center;
-}
-
-/* FIXED LAYOUT FOR ALL SCREEN SIZES ABOVE 1440px */
-@media screen and (min-width: 1441px) {
-  .main-container {
-    max-width: 1440px !important;
-    width: 1440px !important;
-    margin: 0 auto !important;
-    position: relative;
-    overflow-x: hidden;
-  }
-  
-  /* Force all content to stay within container */
-  * {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Navigation fixed width */
-  nav {
-    width: 100% !important;
-    max-width: 1440px !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Sections fixed width */
-  section {
-    width: 100% !important;
-    max-width: 1440px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Profile section constraints */
-  #profile {
-    width: 100% !important;
-    max-width: 1440px !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Timeline constraints */
-  .timeline {
-    max-width: 1200px !important;
-    margin: 5px auto !important;
-  }
-  
-  /* About section constraints */
-  .pro {
-    margin: 0 5rem !important;
-    max-width: calc(1440px - 10rem) !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Footer constraints */
-  footer {
-    width: 100% !important;
-    max-width: 1440px !important;
-    box-sizing: border-box !important;
-  }
-  
-  /* Prevent any element from overflowing */
-  .section-container,
-  .about-containers,
-  .details-container,
-  .article-container {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
 }
 
